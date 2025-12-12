@@ -24,7 +24,7 @@ export const createCustomIcon = (logoUrl) => {
 export const createCustomDivIcon = (logoUrl) => {
     return L.divIcon({
         html: `
-      <div style="
+      <div class="custom-marker-image" style="
         width: 40px;
         height: 40px;
         background-image: url('${logoUrl}');
@@ -33,6 +33,7 @@ export const createCustomDivIcon = (logoUrl) => {
         border-radius: 50%;
         border: 2px solid white;
         box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
       "></div>
     `,
         iconSize: [40, 40],

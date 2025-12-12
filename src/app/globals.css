@@ -33,6 +33,20 @@ body {
 .custom-div-marker-icon {
   background: transparent !important;
   border: none !important;
+  cursor: pointer;
+}
+
+/* Hover effect for custom marker icons */
+.leaflet-marker-icon.custom-div-marker-icon:hover .custom-marker-image,
+.custom-div-marker-icon:hover .custom-marker-image {
+  border-color: #3b82f6 !important; /* Blue-500 */
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5) !important;
+}
+
+/* Alternative approach - target the div directly when parent is hovered */
+.leaflet-container .leaflet-marker-icon.custom-div-marker-icon:hover div.custom-marker-image {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.5) !important;
 }
 
 /* Custom Cluster Icon Styles */
@@ -95,6 +109,10 @@ body {
   left: 20px; /* Offset more right */
   transform: scale(0.9);
   opacity: 0.8;
+}
+
+.leaflet-bottom.leaflet-right{
+  display: none;
 }
 
 /* Ring effect around the main cluster */
@@ -161,4 +179,10 @@ body {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+}
+
+/* User Location Marker */
+.user-location-marker {
+  background: transparent !important;
+  border: none !important;
 }

@@ -101,7 +101,7 @@ const FilterBar = () => {
           
           {filteredCities.length === 0 && (
              <div className="text-center py-8">
-               <p className="text-gray-500 text-sm">No locations found matching "{searchTerm}"</p>
+               <p className="text-gray-500 text-sm">No locations found matching &quot;{searchTerm}&quot;</p>
              </div>
           )}
         </div>

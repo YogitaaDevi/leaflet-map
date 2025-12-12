@@ -34,12 +34,12 @@ export default function MapPage() {
   return (
     <main className="h-screen w-screen flex flex-col">
       {/* Header */}
-      <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg z-20">
+      {/* <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-4 shadow-lg z-20">
         <div className="container mx-auto">
           <h1 className="text-3xl font-bold">Interactive World Map</h1>
           <p className="text-blue-100 mt-1">Explore events around the globe</p>
         </div>
-      </header>
+      </header> */}
 
       {/* Content Container */}
       <div className="flex-1 flex relative overflow-hidden">
