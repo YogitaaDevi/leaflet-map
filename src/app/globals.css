@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Map Container Styles */
+.map-container {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+/* Custom Marker Icon Styles */
+.custom-marker-icon {
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.custom-div-marker-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Custom Cluster Icon Styles */
+.custom-cluster-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Stacked Cluster Styles */
+.cluster-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.cluster-pill {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #1e40af; /* Blue-800 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  z-index: 100;
+  border: 1px solid #e5e7eb;
+}
+
+.cluster-stack-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cluster-stack-img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Stack positioning */
+.cluster-stack-img:nth-child(1) {
+}
+
+.cluster-stack-img:nth-child(2) {
+  top: 5px;
+  left: 15px; /* Offset right */
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.cluster-stack-img:nth-child(3) {
+  z-index: 1;
+  top: 10px;
+  left: 20px; /* Offset more right */
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+/* Ring effect around the main cluster */
+.cluster-ring {
+  position: absolute;
+  top: -5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6; /* Blue-500 */
+  background: rgba(59, 130, 246, 0.1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Popup Styles */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 12px;
+  min-width: 200px;
+}
+
+.popup-content h3 {
+  color: #1e40af;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.popup-content p {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+/* Fix for Leaflet marker icon paths */
+.leaflet-default-icon-path {
+  background-image: url('https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png');
+}
+
+/* Ensure map controls are visible */
+.leaflet-control-zoom {
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 4px !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #f4f4f4 !important;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
